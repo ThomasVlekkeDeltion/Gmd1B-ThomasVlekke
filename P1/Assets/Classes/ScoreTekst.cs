@@ -8,6 +8,7 @@ public class ScoreTekst : MonoBehaviour {
 
     void OnCollisionEnter()
     {
+        //Hier veranderd het script de punten (via een empty GameObject genaamd "Manager"
         scoreScript.ChangeScore(punten);
 
     }

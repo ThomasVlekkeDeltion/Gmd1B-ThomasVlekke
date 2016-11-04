@@ -9,6 +9,7 @@ public class LivesUI : MonoBehaviour {
 	
     void OnCollisionEnter()
     {
+        //bij collision moeten de lives veranderen
         livesScript.ChangeScore(points);
     }
 }

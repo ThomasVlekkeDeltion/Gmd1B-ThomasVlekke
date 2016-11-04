@@ -9,18 +9,9 @@ public class CapsuleScript : MonoBehaviour {
 
     void OnCollisionEnter()
     {
+        //Hier destroy ik de capsule en spawn ik een tweede balletje door middel van de prefab
         Destroy(gameObject);
         GameObject pinball = (GameObject)Instantiate(prefab, cylinder.GetComponent<Transform>().position, cylinder.GetComponent<Transform>().rotation);
         
     }
-
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
 }
