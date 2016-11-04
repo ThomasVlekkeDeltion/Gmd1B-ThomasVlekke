@@ -9,6 +9,6 @@ public class LivesText : MonoBehaviour {
     public void ChangeScore(int points)
     {
         GameObject.Find("Manager").GetComponent<Lives>().lives += points;
-        livestext.text = GameObject.Find("Manager").GetComponent<Lives>().ToString();
+        livestext.text = GameObject.Find("Manager").GetComponent<Lives>().lives.ToString();
     }
 }
