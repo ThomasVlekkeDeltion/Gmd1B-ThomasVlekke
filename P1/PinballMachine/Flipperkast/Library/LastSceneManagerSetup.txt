@@ -1,0 +1,4 @@
+sceneSetups:
+- path: Assets/Collision,deathzone+Rotator.unity
+  isLoaded: 1
+  isActive: 1
