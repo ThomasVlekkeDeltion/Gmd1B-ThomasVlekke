@@ -812,6 +812,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lives: 3
+  GameOver: Game Over
 --- !u!114 &656723461
 MonoBehaviour:
   m_ObjectHideFlags: 0
