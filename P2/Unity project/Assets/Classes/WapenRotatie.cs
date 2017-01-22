@@ -12,7 +12,7 @@ public class WapenRotatie : MonoBehaviour {
 	
 	
 	void Update () {
-
+        // dit is gewoon een script om het wapen te laten draaien
         rot.y = rotspeed;
         transform.Rotate(rot);
 	
