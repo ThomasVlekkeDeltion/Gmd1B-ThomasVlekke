@@ -1,10 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class WapenRotatie : MonoBehaviour {
 
     public float rotspeed;
     public Vector3 rot;
+    public List<bool> rotatie = new List<bool>();
+
 	
 	void Start () {
 	
