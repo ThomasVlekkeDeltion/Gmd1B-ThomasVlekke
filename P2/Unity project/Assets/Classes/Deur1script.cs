@@ -3,6 +3,7 @@ using System.Collections;
 
 public class Deur1script : MonoBehaviour {
 
+    public bool vernietigd;
 
 	void OnCollisionEnter(Collision col)
     {
@@ -10,6 +11,7 @@ public class Deur1script : MonoBehaviour {
         {
             //Hier zeg ik dat als het object waarmee het contact maakt een tag genaamd "steen" heet, hij zichzelf moet vernietigen
             Destroy(GameObject.Find("Deur 1"));
+            vernietigd = true;
         }
        
     }

@@ -4,6 +4,7 @@ using System.Collections;
 public class Counter : MonoBehaviour {
 
     public float timer;
+    public GameObject canvas;
 
 	
 	void Start () {
@@ -13,12 +14,22 @@ public class Counter : MonoBehaviour {
 	
 	void Update () {
 
-        timer += Time.deltaTime;
-
-        if(timer > 10)
+        if (GameObject.Find("Main Camera").GetComponent<Raycast>().vernietigd == true)
         {
-            Destroy(gameObject);
+            timer += Time.deltaTime;
+
+            if (timer > 8)
+            {
+                Destroy(gameObject);
+                timer = 0;
+                Instantiate(canvas);
+                if (timer > 5)
+                {
+                    Destroy(canvas);
+                }
+            }
         }
+        
 
 	}
 }

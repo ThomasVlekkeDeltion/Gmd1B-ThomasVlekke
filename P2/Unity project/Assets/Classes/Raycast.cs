@@ -3,12 +3,16 @@ using System.Collections;
 
 public class Raycast : MonoBehaviour {
 
+    public float canvasSpawn;
     private RaycastHit hit;
+    public GameObject prefab;
+    public bool wapenOppakken;
+    public bool vernietigd;
 
 
     void Start()
     {
-
+        
     }
 
 
@@ -23,12 +27,31 @@ public class Raycast : MonoBehaviour {
                 if (hit.transform.tag == "vernietigen")
                 {
                     Destroy(hit.transform.gameObject);
+                    vernietigd = true;
                 }
                 if (hit.transform.tag == "wapen")
                 {
                     GameObject.Find("WeaponDing").GetComponent<WapenRotatie>().rotatie [0] = true;
                 }
             }
+        }
+        if (GameObject.Find("WeaponDing").GetComponent<WapenRotatie>().rotatie [0] == true)
+        {
+            wapenOppakken = true;
+            if (wapenOppakken == true)
+            {
+                Instantiate(prefab);
+                wapenOppakken = false;
+                
+            }
+
+            canvasSpawn += Time.deltaTime;
+            if (canvasSpawn > 5)
+            {
+                Destroy(prefab);
+                canvasSpawn = 0;
+            }
+            GameObject.Find("WeaponDing").GetComponent<WapenRotatie>().rotatie[0] = false;
         }
     }
 }
